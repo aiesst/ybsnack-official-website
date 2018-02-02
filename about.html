@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>关于我们</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-migrate/1.1.1/jquery-migrate.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.js"></script>
+
+    <script src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
+    <script>
+        $(window).load(
+            function() {
+                $('.carousel2').carouFredSel({
+                    auto: false,
+                    prev: '.prev1',
+                    next: '.next1',
+                    width: 410,
+                    items: {
+                        visible: {
+                            min: 1,
+                            max: 1
+                        },
+                        height: 'auto',
+                        width: 410,
+
+                    },
+                    responsive: false,
+
+                    scroll: 1,
+
+                    mousewheel: false,
+
+                    swipe: {
+                        onMouse: false,
+                        onTouch: false
+                    }
+                });
+
+
+            });
+    </script>
+    <!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+         </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <link rel="stylesheet" media="screen" href="css/ie.css">
+
+    <![endif]-->
+</head>
+
+<body>
+    <script type="text/javascript">
+        /* 鼠标点击特效 */
+        var a_idx = 0;
+        jQuery(document).ready(function($) {
+            $("body").click(function(e) {
+                var a = new Array("兔兔", "乖乖", "牛牛", "可爱", "美味", "正宗", "健康", "兔兔", "牛牛", "美味", "正宗", "健康");
+                var $i = $("<span/>").text(a[a_idx]);
+                a_idx = (a_idx + 1) % a.length;
+                var x = e.pageX,
+                    y = e.pageY;
+                $i.css({
+                    "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                    "top": y - 20,
+                    "left": x,
+                    "position": "absolute",
+                    "font-weight": "bold",
+                    "color": "#ff6651"
+                });
+                $("body").append($i);
+                $i.animate({
+                        "top": y - 180,
+                        "opacity": 0
+                    },
+                    1500,
+                    function() {
+                        $i.remove();
+                    });
+            });
+        });
+    </script>
+    <div class="main">
+        <!--==============================header=================================-->
+        <header>
+            <div class="container_12">
+                <div class="grid_12">
+                    <h1>
+                        <a href="index.html"><img src="images/logo.png" alt="EXTERIOR"></a>
+                    </h1>
+
+                    <div class="menu_block">
+                        <nav class="">
+                            <ul class="sf-menu">
+                                <li><a href="index.html">主页</a></li>
+                                <li class="current"><a href="about.html">关于我们</a></li>
+                                <li><a href="agent.html">加盟代理</a></li>
+
+
+                            </ul>
+                        </nav>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </header>
+        <!--=======content================================-->
+
+        <div class="content">
+
+            <div class="container_12" style="line-height: 24px;">
+                <div class="grid_5">
+                    <h2>关于我们</h2>
+                    <img src="images/4 (1).jpg" alt="" class="img_inner">
+                    <p class="col1" style="font-size:16px; text-indent:2em">
+                        <a href="#">盐帮吃货所有的小吃食品都是在一个干净卫生并且检验合格的加工环境制作。制作器材采用无毒、无味、易清洗的锅碗；制作间的墙面光滑，不易积累污垢且易于清洗；整体环境都是隔相应的短时间进行整体打扫清洁和消毒；地面也是使用防滑、不渗透、耐腐蚀、无毒的材料，同时无裂缝、无局部积水、易于清洁的特性；
+                            </a> </p>
+                    <p class="col1" style="font-size:16px;text-indent:2em">
+                        <a href="#">肉类等原材料放置于相应的搁架，搁架材料选用不锈钢等易清洗、耐腐蚀的材料；所有相应的烹制材料都是采用不渗透、耐腐蚀、无毒、易清洗的器具；并设有畅通的排水设施，保证污水排除畅通 <br></a></p>
+                    <P class="col1" style="font-size:16px;text-indent:2em">
+                        <a href="#">所有肉类都是选用最新鲜并有相关检验的原材料，包装也是采用无毒的健康绿色安全的食品包装袋，同时包装过程也是在一个安全卫生的环境钟进行真空包装，一律不采用不新鲜的材料进行制作， 同时在制作过程中不采用任何添加剂和防腐剂，以保证食品的纯绿色和健康。
+                            </a></P>
+                </div>
+                <div class="grid_5 prefix_2">
+                    <h2>企业文化</h2>
+                    <ul class="carousel2">
+                        <li>
+                            <blockquote>
+                                <img src="images/welcome_img.png" alt="">
+
+                                <div class="clear"></div>
+                                <p class="col1" style="font-size:16px;text-indent:2em"><a href="#">盐帮吃货最正宗的自贡小吃，以最健康、最正宗、最美味为宗旨。</a></p>
+                                <p class="col1" style="font-size:16px;text-indent:2em">民间相传：冷吃兔，又名香辣兔，其由来是 春秋战国至西汉，在今贵州境内出现许多“部落方国”，如牂牁、夜郎、且兰、毋敛等，蜀汉建兴三年（225年），诸葛亮亲自领兵，“五月渡沪”，分三路进入云南，平定“南中大姓”的反叛，诸葛亮从西蜀益州协同关张二人一同前往平定牂牁郡 治兰且（今贵州贵定附近、或凯里附近、或安顺附近）。 </p>
+                                <p class="col1" style="font-size:16px;text-indent:2em">途经今自贡富顺县，张飞爱酒如命，想途中小酌，然而诸葛亮严禁征战途中酗酒，故而张飞只好偷偷购买偷偷饮酒。随行大军张飞垫后，张飞乘入厕之余来到一家"黄氏店中"要求买酒打包，怎奈无下酒之菜，当时见临桌刚端上热气腾腾的“干辣椒+兔儿肉”变一把抓过倒与行囊之中，付钱转身急走。途中张飞掏出酒便饮，突想行囊中的兔儿肉，此时变冷。张飞猛吃一口，辣的满头大汗，同时伴随酒的辣，好是双劲，全身充满力量。
+                                </p>
+
+                                <p class="col1" style="font-size:16px;text-indent:2em">盐帮吃货品牌成立于2017年，从刚开始的手工家庭制作到合格正规的标准化批量生产，秉承其宗旨和裂变的销售模式，盐帮吃货在短短几个月成长迅速，其销量在同行中位列数一数二，这离不开极好的品牌、食品的好口感和安全、公司员工的努力、代理的日夜辛勤和广大消费群众的认可。盐帮吃货的成长离不开大家的努力，相信在未来，盐帮吃货会为代理创造更多的财富，为广大消费群众提供最健康、最正宗、最美味的自贡小吃。</p>
+
+                            </blockquote>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="clear"></div>
+                <div class="grid_12">
+                    <div class="hor_separator hor1"></div>
+                    <h2 class="head1">加工细节</h2>
+                </div>
+                <div class="clear"></div>
+                <div class="chefs">
+                    <div class="grid_3">
+                        <img src="images/1 (1).jpg" alt="" class="img_inner">
+                        <p class="col1"><a href="#">兔子</a></p>“选用最新鲜、最健康的农家兔子作为兔类小吃的原料，肉类保证新鲜安全，最好的肉质作为冷吃兔丁的原料”.
+                    </div>
+                    <div class="grid_3">
+                        <img src="images/1 (2).jpg" alt="" class="img_inner">
+                        <p class="col1"><a href="#">黄牛</a></p>“选用肉质最好的草原黄牛，牛肉坚决不使用冻肉，招牌牛肉精选黄牛的后腿肉，其肉质口感达到极好”.
+                    </div>
+                    <div class="grid_3">
+                        <img src="images/1 (3).jpg" alt="" class="img_inner">
+                        <p class="col1"><a href="#">干辣椒</a></p>“干辣椒是小吃制作中重要的角色，选购的是最新鲜的小米辣和灯笼椒，将其太阳晒干和风干，保持最原有的自然香辣”.
+                    </div>
+                    <div class="grid_3">
+                        <img src="images/1 (4).jpg" alt="" class="img_inner">
+                        <p class="col1"><a href="#">辛香料</a></p>“采用天然香料，包括胡椒.茴香.姜.肉桂.丁香.桂皮.姜.大葱.八角.陈皮.蒜等三十余种香料，不含任何防腐剂和添加剂”.
+                    </div>
+                </div>
+
+
+                <div class="clear"></div>
+                <div class="bottom_block">
+                    <div class="grid_6">
+                        <h3>联系我们</h3>
+                        <div>
+                            <a style="font-size:14px">电话：15923988892.18380464470</a>
+
+                        </div>
+                        <div>
+                            <a style="font-size:14px">地址：自贡市汇川路与通达路交汇处南湖体育中心西侧</a>
+
+                        </div>
+                        <nav>
+                            <ul>
+                                <li><a href="index.html">主页</a></li>
+                                <li class="current"><a href="about.html">关于我们</a></li>
+                                <li><a href="agent.html">加盟代理</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="grid_6" style="height:150px;width:460px">
+                        <ul style="margin-top:20px">
+                            <li style="float:left;width:300px;height:300px;margin-right:10px">
+                                <img src="images/1.jpg" alt="">
+                            </li>
+                            <li style="float:left;width:150px;height:150px;margin-top:20px;">
+
+                                <img src="http://bjmhasset.b0.upaiyun.com/assets/level3/layout/portal/home-3002c8dd8255b9d37e79af8a486b0a2c.gif" alt="" style="background:#f2f0f0">
+
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--==============================footer=================================-->
+
+
+    <footer>
+        <div class="container_12">
+            <div class="grid_12">
+                © 2017 &nbsp;&nbsp; |&nbsp;&nbsp; <a href="#">盐帮吃货</a> &nbsp;&nbsp;|&nbsp;&nbsp; 版权归盐帮吃货所有
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+</body>
+
+</html>
